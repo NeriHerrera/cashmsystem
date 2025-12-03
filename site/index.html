@@ -16,7 +16,11 @@
         <a class="hero__brand" href="#top" aria-label="Cash Management System">
           <img src="assets/CMS-blanco-sin bajada.png" alt="CMS">
         </a>
-        <div class="hero__links">
+        <button class="hero__toggle" type="button" aria-label="Abrir menú principal" aria-expanded="false" aria-controls="primary-menu">
+          <span class="hero__toggle-bar"></span>
+          <span class="hero__toggle-bar"></span>
+        </button>
+        <div class="hero__links" id="primary-menu">
           <a href="#top" data-i18n="nav.home">INICIO</a>
           <a href="#sobre" data-i18n="nav.about">NOSOTROS</a>
           <a href="#servicios" data-i18n="nav.services">SERVICIOS</a>
@@ -328,6 +332,66 @@
     });
 
     setLang('es');
+
+    // Navegación móvil: menú desplegable y ocultar/mostrar al hacer scroll
+    (function () {
+      const heroNav = document.querySelector('.hero__nav');
+      const heroToggle = document.querySelector('.hero__toggle');
+      const mobileQuery = window.matchMedia('(max-width: 900px)');
+      let lastScrollY = window.scrollY || window.pageYOffset;
+      let navHidden = false;
+
+      if (heroToggle && heroNav) {
+        heroToggle.addEventListener('click', () => {
+          const isOpen = heroNav.classList.toggle('hero__nav--menu-open');
+          heroToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+
+      function handleScroll() {
+        if (!heroNav || !mobileQuery.matches) return;
+
+        const currentY = window.scrollY || window.pageYOffset;
+        const delta = currentY - lastScrollY;
+
+        if (Math.abs(delta) < 4) {
+          lastScrollY = currentY;
+          return;
+        }
+
+        if (currentY > lastScrollY && currentY > 60) {
+          if (!navHidden) {
+            heroNav.classList.add('hero__nav--hidden');
+            heroNav.classList.remove('hero__nav--menu-open');
+            if (heroToggle) heroToggle.setAttribute('aria-expanded', 'false');
+            navHidden = true;
+          }
+        } else {
+          if (navHidden) {
+            heroNav.classList.remove('hero__nav--hidden');
+            navHidden = false;
+          }
+        }
+
+        lastScrollY = currentY;
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      if (mobileQuery.addEventListener) {
+        mobileQuery.addEventListener('change', () => {
+          if (!heroNav) return;
+          heroNav.classList.remove('hero__nav--hidden', 'hero__nav--menu-open');
+          if (heroToggle) heroToggle.setAttribute('aria-expanded', 'false');
+        });
+      } else if (mobileQuery.addListener) {
+        mobileQuery.addListener(() => {
+          if (!heroNav) return;
+          heroNav.classList.remove('hero__nav--hidden', 'hero__nav--menu-open');
+          if (heroToggle) heroToggle.setAttribute('aria-expanded', 'false');
+        });
+      }
+    })();
   </script>
 </body>
 </html>
