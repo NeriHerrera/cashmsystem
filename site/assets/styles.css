@@ -298,6 +298,8 @@ p {
 
 .hero__toggle {
   display: none;
+  opacity: 0;
+  pointer-events: none;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(0, 0, 0, 0.52);
   border-radius: 999px;
@@ -992,6 +994,8 @@ p {
 
   .hero__toggle {
     display: flex;
+    opacity: 1;
+    pointer-events: auto;
     flex-direction: column;
     margin-left: auto;
   }
