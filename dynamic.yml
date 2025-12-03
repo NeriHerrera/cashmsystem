@@ -1,0 +1,8 @@
+# Configuración dinámica para Traefik.
+# Ajusta las rutas de certificados según el host donde despliegues.
+tls:
+  certificates:
+    - certFile: /certs/cashmsystem/fullchain.pem
+      keyFile: /certs/cashmsystem/privkey.pem
+    - certFile: /certs/fundraiser/fullchain.pem
+      keyFile: /certs/fundraiser/privkey.pem
