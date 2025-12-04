@@ -685,12 +685,8 @@ p {
 .about__highlight {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px 20px;
-  padding: 16px 18px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  gap: 16px;
+  margin-top: 12px;
 }
 
 .about__highlight .label {
