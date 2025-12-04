@@ -711,11 +711,14 @@ p {
 }
 
 .contact__title {
-  font-size: clamp(28px, 4vw, 32px);
+  font-size: clamp(30px, 6vw, 40px);
+  margin-bottom: 10px;
 }
 
 .contact__lede {
   max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .contact__details {
@@ -830,7 +833,7 @@ p {
   }
 
   .about__highlight {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .contact__panel {
