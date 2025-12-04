@@ -830,7 +830,7 @@ p {
   }
 
   .about__highlight {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .contact__panel {

@@ -25,7 +25,7 @@
           <a href="#top" data-i18n="nav.home">INICIO</a>
           <a href="#sobre" data-i18n="nav.about">NOSOTROS</a>
           <a href="#servicios" data-i18n="nav.services">SERVICIOS</a>
-          <a href="#capacidad" data-i18n="nav.contact">CONTACTO</a>
+          <a href="#contacto" data-i18n="nav.contact">CONTACTO</a>
           <div class="nav-lang">
             <button class="nav-lang__btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n="nav.language">Idioma &#9662;</button>
             <div class="nav-lang__menu" role="menu">
@@ -182,7 +182,7 @@
 
           <div class="contact__form-wrapper">
             <h3 class="contact__form-title">Env&iacute;anos tu mensaje</h3>
-            <form class="contact-form" action="mailto:contacto@cashmsys.com.ar" method="post" enctype="text/plain">
+            <form class="contact-form">
               <label class="contact-form__field">
                 <span>Nombre</span>
                 <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
@@ -446,6 +446,48 @@
           if (heroToggle) heroToggle.setAttribute('aria-expanded', 'false');
         });
       }
+    })();
+
+    // Envío de formulario de contacto vía mailto sin alerta de formulario inseguro
+    (function () {
+      const contactForm = document.querySelector('.contact-form');
+      if (!contactForm) return;
+
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const nombre = (formData.get('nombre') || '').toString();
+        const correo = (formData.get('correo') || '').toString();
+        const mensaje = (formData.get('mensaje') || '').toString();
+
+        if (typeof contactForm.reportValidity === 'function') {
+          if (!contactForm.reportValidity()) {
+            return;
+          }
+        } else if (typeof contactForm.checkValidity === 'function') {
+          if (!contactForm.checkValidity()) {
+            return;
+          }
+        } else {
+          if (!nombre.trim() || !correo.trim() || !mensaje.trim()) {
+            alert('Por favor completá nombre, correo y mensaje.');
+            return;
+          }
+        }
+
+        const subject = 'Consulta desde el sitio web';
+        const bodyLines = [
+          `Nombre: ${nombre}`,
+          `Correo: ${correo}`,
+          '',
+          'Mensaje:',
+          mensaje
+        ];
+
+        const mailto = `mailto:contacto@cashmsys.com.ar?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+        window.location.href = mailto;
+      });
     })();
   </script>
 </body>
