@@ -662,9 +662,9 @@ p {
 
 .about__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
-  gap: 28px;
-  align-items: flex-end;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: flex-start;
 }
 
 .about__grid {
@@ -684,7 +684,7 @@ p {
 
 .about__highlight {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px 20px;
   padding: 16px 18px;
   border-radius: 14px;
