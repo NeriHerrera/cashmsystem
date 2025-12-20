@@ -1274,6 +1274,10 @@ p {
   height: auto;
 }
 
+.tariffs-accessible {
+  margin-top: 24px;
+}
+
 .tariffs-overlay__close {
   position: fixed;
   top: 26px;
