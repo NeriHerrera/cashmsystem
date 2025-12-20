@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esquema tarifario - Cash Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body id="top">
+  <main>
+    <section id="tarifas" class="tariffs-overlay" aria-labelledby="tariffs-title">
+      <div class="tariffs-overlay__inner">
+        <a href="index.html#top" class="tariffs-overlay__close" aria-label="Volver a la p&aacute;gina principal">&times;</a>
+        <div class="tariffs-card">
+          <div class="tariffs-image-wrapper">
+            <img src="assets/tablacash.png" class="tariffs-image" alt="Esquema tarifario" />
+          </div>
+
+          <div class="sr-only tariffs-accessible">
+            <header class="tariffs-card__header">
+              <p class="eyebrow tariffs-card__eyebrow" data-i18n="tariffs.subtitle">Esquema tarifario</p>
+              <h2 id="tariffs-title" class="tariffs-title" data-i18n="tariffs.heading">Esquema tarifario</h2>
+              <p class="tariffs-subtitle" data-i18n="tariffs.subheading">Valores expresados en pesos argentinos.</p>
+            </header>
+
+            <div class="tariffs-table-wrapper">
+              <table class="tariffs-table">
+                <thead>
+                  <tr>
+                    <th rowspan="2" scope="col" class="tariffs-table__services" data-i18n="tariffs.col.service">Servicios</th>
+                    <th colspan="2" scope="colgroup" data-i18n="tariffs.col.fixed">Tarifa Fija</th>
+                    <th colspan="2" scope="colgroup" data-i18n="tariffs.col.percent">Porcentaje sobre monto transportado</th>
+                  </tr>
+                  <tr>
+                    <th scope="col" data-i18n="tariffs.col.from">Desde</th>
+                    <th scope="col" data-i18n="tariffs.col.to">Hasta</th>
+                    <th scope="col" data-i18n="tariffs.col.from">Desde</th>
+                    <th scope="col" data-i18n="tariffs.col.to">Hasta</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" data-i18n="tariffs.row1.service">Transporte terrestre (*)</th>
+                    <td data-i18n="tariffs.row1.fixed.from">$ 4.104,59</td>
+                    <td data-i18n="tariffs.row1.fixed.to">$ 1.172.169,74</td>
+                    <td data-i18n="tariffs.row1.percent.from">0,0114%</td>
+                    <td data-i18n="tariffs.row1.percent.to">21,8291%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="tariffs.row2.service">Atesoramiento</th>
+                    <td data-i18n="tariffs.row2.fixed.from">$ -</td>
+                    <td data-i18n="tariffs.row2.fixed.to">$ -</td>
+                    <td data-i18n="tariffs.row2.percent.from">0,0009%</td>
+                    <td data-i18n="tariffs.row2.percent.to">1,7119%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="tariffs.row3.service">Custodia</th>
+                    <td data-i18n="tariffs.row3.fixed.from">$ -</td>
+                    <td data-i18n="tariffs.row3.fixed.to">$ -</td>
+                    <td data-i18n="tariffs.row3.percent.from">0,0009%</td>
+                    <td data-i18n="tariffs.row3.percent.to">1,7119%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="tariffs.row4.service">Recuento y clasificaci&oacute;n de valores (por bala)</th>
+                    <td data-i18n="tariffs.row4.fixed.from">$ 2.124,68</td>
+                    <td data-i18n="tariffs.row4.fixed.to">$ 23.452,02</td>
+                    <td data-i18n="tariffs.row4.percent.from">0,114%</td>
+                    <td data-i18n="tariffs.row4.percent.to">19,7524%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="tariffs.row5.service">Precio por kil&oacute;metro</th>
+                    <td data-i18n="tariffs.row5.fixed.from">$ 342,00</td>
+                    <td data-i18n="tariffs.row5.fixed.to">$ 3.925,02</td>
+                    <td data-i18n="tariffs.row5.percent.from">0,0000%</td>
+                    <td data-i18n="tariffs.row5.percent.to">0,0000%</td>
+                  </tr>
+                  <tr class="tariffs-table__row-highlight">
+                    <th scope="row" data-i18n="tariffs.row6.service">Recargo por servicio en d&iacute;a S&aacute;bado, domingo o feriado</th>
+                    <td data-i18n="tariffs.row6.fixed.from">0%</td>
+                    <td data-i18n="tariffs.row6.fixed.to">100%</td>
+                    <td data-i18n="tariffs.row6.percent.from">0%</td>
+                    <td data-i18n="tariffs.row6.percent.to">100%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tariffs-notes">
+              <p class="tariffs-note" data-i18n="tariffs.note.star">(*) D&iacute;a h&aacute;bil - Horario Bancario - Ruta preexistente.</p>
+              <p class="tariffs-note" data-i18n="tariffs.note.intro">
+                La variaci&oacute;n entre el m&iacute;nimo y m&aacute;ximo publicado depende de factores objetivos de cada servicio a contratar.
+              </p>
+              <p class="tariffs-note" data-i18n="tariffs.note.example">
+                A modo de ejemplo, la transportadora tiene en cuenta los siguientes elementos. (Pueden existir elementos no contemplados en el presente detalle los cuales ser&aacute;n informados al cliente al momento de realizar la contrataci&oacute;n):
+              </p>
+              <ol class="tariffs-note-list">
+                <li data-i18n="tariffs.note.a">La franja horaria en que el servicio debe ser prestado.</li>
+                <li data-i18n="tariffs.note.b">El volumen de los valores a transportar.</li>
+                <li data-i18n="tariffs.note.c">El nivel de seguridad de los puntos de carga y descarga.</li>
+                <li data-i18n="tariffs.note.d">El horario en el cual se presta el servicio.</li>
+                <li data-i18n="tariffs.note.e">La cantidad de servicios a prestar en la misma ruta.</li>
+                <li data-i18n="tariffs.note.f">La cantidad de destinos en los que se deba recaudar y/o entregar por cada cliente, as&iacute; como la distancia geogr&aacute;fica a recorrer.</li>
+                <li data-i18n="tariffs.note.g">Los impuestos de cada jurisdicci&oacute;n en la que le corresponda tributar a la Sociedad.</li>
+              </ol>
+              <p class="tariffs-bottom" data-i18n="tariffs.bottom">CUIDAMOS TUS VALORES</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#top" class="footer__top tariffs-overlay__top" aria-label="Volver arriba">&uarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const translations = {
+      es: {
+        "tariffs.heading": "Esquema tarifario",
+        "tariffs.subtitle": "Esquema tarifario",
+        "tariffs.subheading": "Valores expresados en pesos argentinos.",
+        "tariffs.col.service": "Servicios",
+        "tariffs.col.fixed": "Tarifa Fija",
+        "tariffs.col.percent": "Porcentaje sobre monto transportado",
+        "tariffs.col.from": "Desde",
+        "tariffs.col.to": "Hasta",
+        "tariffs.row1.service": "Transporte terrestre (*)",
+        "tariffs.row1.fixed.from": "$ 4.104,59",
+        "tariffs.row1.fixed.to": "$ 1.172.169,74",
+        "tariffs.row1.percent.from": "0,0114%",
+        "tariffs.row1.percent.to": "21,8291%",
+        "tariffs.row2.service": "Atesoramiento",
+        "tariffs.row2.fixed.from": "$ -",
+        "tariffs.row2.fixed.to": "$ -",
+        "tariffs.row2.percent.from": "0,0009%",
+        "tariffs.row2.percent.to": "1,7119%",
+        "tariffs.row3.service": "Custodia",
+        "tariffs.row3.fixed.from": "$ -",
+        "tariffs.row3.fixed.to": "$ -",
+        "tariffs.row3.percent.from": "0,0009%",
+        "tariffs.row3.percent.to": "1,7119%",
+        "tariffs.row4.service": "Recuento y clasificaci&oacute;n de valores (por bala)",
+        "tariffs.row4.fixed.from": "$ 2.124,68",
+        "tariffs.row4.fixed.to": "$ 23.452,02",
+        "tariffs.row4.percent.from": "0,114%",
+        "tariffs.row4.percent.to": "19,7524%",
+        "tariffs.row5.service": "Precio por kil&oacute;metro",
+        "tariffs.row5.fixed.from": "$ 342,00",
+        "tariffs.row5.fixed.to": "$ 3.925,02",
+        "tariffs.row5.percent.from": "0,0000%",
+        "tariffs.row5.percent.to": "0,0000%",
+        "tariffs.row6.service": "Recargo por servicio en d&iacute;a S&aacute;bado, domingo o feriado",
+        "tariffs.row6.fixed.from": "0%",
+        "tariffs.row6.fixed.to": "100%",
+        "tariffs.row6.percent.from": "0%",
+        "tariffs.row6.percent.to": "100%",
+        "tariffs.note.star": "(*) D&iacute;a h&aacute;bil - Horario Bancario - Ruta preexistente.",
+        "tariffs.note.intro": "La variaci&oacute;n entre el m&iacute;nimo y m&aacute;ximo publicado depende de factores objetivos de cada servicio a contratar.",
+        "tariffs.note.example": "A modo de ejemplo, la transportadora tiene en cuenta los siguientes elementos. (Pueden existir elementos no contemplados en el presente detalle los cuales ser&aacute;n informados al cliente al momento de realizar la contrataci&oacute;n):",
+        "tariffs.note.a": "La franja horaria en que el servicio debe ser prestado.",
+        "tariffs.note.b": "El volumen de los valores a transportar.",
+        "tariffs.note.c": "El nivel de seguridad de los puntos de carga y descarga.",
+        "tariffs.note.d": "El horario en el cual se presta el servicio.",
+        "tariffs.note.e": "La cantidad de servicios a prestar en la misma ruta.",
+        "tariffs.note.f": "La cantidad de destinos en los que se deba recaudar y/o entregar por cada cliente, as&iacute; como la distancia geogr&aacute;fica a recorrer.",
+        "tariffs.note.g": "Los impuestos de cada jurisdicci&oacute;n en la que le corresponda tributar a la Sociedad.",
+        "tariffs.bottom": "CUIDAMOS TUS VALORES"
+      },
+      us: {
+        "tariffs.heading": "Rate Schedule",
+        "tariffs.subtitle": "Rate Schedule",
+        "tariffs.subheading": "Values expressed in Argentine pesos.",
+        "tariffs.col.service": "Services",
+        "tariffs.col.fixed": "Fixed Fee",
+        "tariffs.col.percent": "Percentage over transported amount",
+        "tariffs.col.from": "From",
+        "tariffs.col.to": "To",
+        "tariffs.row1.service": "Ground transportation (*)",
+        "tariffs.row1.fixed.from": "$ 4,104.59",
+        "tariffs.row1.fixed.to": "$ 1,172,169.74",
+        "tariffs.row1.percent.from": "0.0114%",
+        "tariffs.row1.percent.to": "21.8291%",
+        "tariffs.row2.service": "Treasury / Vaulting",
+        "tariffs.row2.fixed.from": "$ -",
+        "tariffs.row2.fixed.to": "$ -",
+        "tariffs.row2.percent.from": "0.0009%",
+        "tariffs.row2.percent.to": "1.7119%",
+        "tariffs.row3.service": "Custody",
+        "tariffs.row3.fixed.from": "$ -",
+        "tariffs.row3.fixed.to": "$ -",
+        "tariffs.row3.percent.from": "0.0009%",
+        "tariffs.row3.percent.to": "1.7119%",
+        "tariffs.row4.service": "Cash counting and classification (per bag)",
+        "tariffs.row4.fixed.from": "$ 2,124.68",
+        "tariffs.row4.fixed.to": "$ 23,452.02",
+        "tariffs.row4.percent.from": "0.114%",
+        "tariffs.row4.percent.to": "19.7524%",
+        "tariffs.row5.service": "Price per kilometer",
+        "tariffs.row5.fixed.from": "$ 342.00",
+        "tariffs.row5.fixed.to": "$ 3,925.02",
+        "tariffs.row5.percent.from": "0.0000%",
+        "tariffs.row5.percent.to": "0.0000%",
+        "tariffs.row6.service": "Surcharge for service on Saturday, Sunday or holiday",
+        "tariffs.row6.fixed.from": "0%",
+        "tariffs.row6.fixed.to": "100%",
+        "tariffs.row6.percent.from": "0%",
+        "tariffs.row6.percent.to": "100%",
+        "tariffs.note.star": "(*) Business day - Banking hours - Pre-existing route.",
+        "tariffs.note.intro": "The variation between the minimum and maximum published depends on objective factors of each service to be contracted.",
+        "tariffs.note.example": "As an example, the carrier takes into account the following elements (there may be elements not contemplated in this detail, which will be informed to the client at the time of contracting):",
+        "tariffs.note.a": "The time slot in which the service must be provided.",
+        "tariffs.note.b": "The volume of valuables to be transported.",
+        "tariffs.note.c": "The security level of pickup and delivery points.",
+        "tariffs.note.d": "The time of day at which the service is provided.",
+        "tariffs.note.e": "The number of services to be performed on the same route.",
+        "tariffs.note.f": "The number of destinations for collection and/or delivery per client, as well as the distance to be traveled.",
+        "tariffs.note.g": "Applicable taxes in each jurisdiction where the company must pay.",
+        "tariffs.bottom": "WE SAFEGUARD YOUR ASSETS"
+      },
+      bra: {
+        "tariffs.heading": "Esquema tarif&aacute;rio",
+        "tariffs.subtitle": "Esquema tarif&aacute;rio",
+        "tariffs.subheading": "Valores expressos em pesos argentinos.",
+        "tariffs.col.service": "Servi&ccedil;os",
+        "tariffs.col.fixed": "Tarifa fixa",
+        "tariffs.col.percent": "Percentual sobre o valor transportado",
+        "tariffs.col.from": "De",
+        "tariffs.col.to": "At&eacute;",
+        "tariffs.row1.service": "Transporte terrestre (*)",
+        "tariffs.row1.fixed.from": "$ 4.104,59",
+        "tariffs.row1.fixed.to": "$ 1.172.169,74",
+        "tariffs.row1.percent.from": "0,0114%",
+        "tariffs.row1.percent.to": "21,8291%",
+        "tariffs.row2.service": "Tesouraria / Atesoramento",
+        "tariffs.row2.fixed.from": "$ -",
+        "tariffs.row2.fixed.to": "$ -",
+        "tariffs.row2.percent.from": "0,0009%",
+        "tariffs.row2.percent.to": "1,7119%",
+        "tariffs.row3.service": "Cust&oacute;dia",
+        "tariffs.row3.fixed.from": "$ -",
+        "tariffs.row3.fixed.to": "$ -",
+        "tariffs.row3.percent.from": "0,0009%",
+        "tariffs.row3.percent.to": "1,7119%",
+        "tariffs.row4.service": "Recontagem e classifica&ccedil;&atilde;o de valores (por saco)",
+        "tariffs.row4.fixed.from": "$ 2.124,68",
+        "tariffs.row4.fixed.to": "$ 23.452,02",
+        "tariffs.row4.percent.from": "0,114%",
+        "tariffs.row4.percent.to": "19,7524%",
+        "tariffs.row5.service": "Pre&ccedil;o por quil&ocirc;metro",
+        "tariffs.row5.fixed.from": "$ 342,00",
+        "tariffs.row5.fixed.to": "$ 3.925,02",
+        "tariffs.row5.percent.from": "0,0000%",
+        "tariffs.row5.percent.to": "0,0000%",
+        "tariffs.row6.service": "Adicional por servi&ccedil;o em s&aacute;bados, domingos ou feriados",
+        "tariffs.row6.fixed.from": "0%",
+        "tariffs.row6.fixed.to": "100%",
+        "tariffs.row6.percent.from": "0%",
+        "tariffs.row6.percent.to": "100%",
+        "tariffs.note.star": "(*) Dia &uacute;til - Hor&aacute;rio banc&aacute;rio - Rota preexistente.",
+        "tariffs.note.intro": "A varia&ccedil;&atilde;o entre o m&iacute;nimo e o m&aacute;ximo publicado depende de fatores objetivos de cada servi&ccedil;o contratado.",
+        "tariffs.note.example": "Como exemplo, a transportadora considera os seguintes elementos (podem existir elementos n&atilde;o contemplados neste detalhamento, que ser&atilde;o informados ao cliente no momento da contrata&ccedil;&atilde;o):",
+        "tariffs.note.a": "A faixa hor&aacute;ria em que o servi&ccedil;o deve ser prestado.",
+        "tariffs.note.b": "O volume de valores a transportar.",
+        "tariffs.note.c": "O n&iacute;vel de seguran&ccedil;a dos pontos de carga e descarga.",
+        "tariffs.note.d": "O hor&aacute;rio em que o servi&ccedil;o &eacute; prestado.",
+        "tariffs.note.e": "A quantidade de servi&ccedil;os a serem realizados na mesma rota.",
+        "tariffs.note.f": "A quantidade de destinos para coleta e/ou entrega por cliente, bem como a dist&acirc;ncia geogr&aacute;fica a ser percorrida.",
+        "tariffs.note.g": "Os impostos de cada jurisdi&ccedil;&atilde;o em que a Sociedade deva tributar.",
+        "tariffs.bottom": "CUIDAMOS DOS SEUS VALORES"
+      }
+    };
+
+    function setLang(lang) {
+      const dict = translations[lang] || translations.es;
+      document.documentElement.lang = lang === 'us' ? 'en' : lang === 'bra' ? 'pt-BR' : 'es';
+      document.querySelectorAll('[data-i18n]').forEach((node) => {
+        const key = node.dataset.i18n;
+        if (dict[key]) node.innerHTML = dict[key];
+      });
+    }
+
+    (function () {
+      let initialLang = 'es';
+      try {
+        const stored = window.localStorage.getItem('cms_lang');
+        if (stored) initialLang = stored;
+      } catch (e) {
+        initialLang = 'es';
+      }
+      setLang(initialLang);
+    })();
+  </script>
+</body>
+</html>
