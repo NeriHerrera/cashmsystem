@@ -1263,6 +1263,17 @@ p {
   color: #f0d9a8;
 }
 
+.tariffs-image-wrapper {
+  max-width: 1152px;
+  margin: 0 auto 0;
+}
+
+.tariffs-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .tariffs-overlay__close {
   position: fixed;
   top: 26px;
